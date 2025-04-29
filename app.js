@@ -1,4 +1,3 @@
-
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,7 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 // Configuración de Pug
 app.set('view engine', 'pug');
@@ -27,10 +25,8 @@ app.use((req, res, next) => {
 // Monta el router
 app.use('/', router);
 
-// Arranca el servidor
-app.listen(port, () => {
-  console.log(`Escuchando en http://localhost:${port}`);
-});
+export default app;
+
 
 
 
