@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h2= titulo
+  .galeria
+    each obra in obras
+      .obra-card
+        img(src=obra.imagen, alt=obra.titulo)
+        h3= obra.titulo
+        p= obra.autor + " (" + obra.año + ")"
+
+

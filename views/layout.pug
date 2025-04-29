@@ -1,0 +1,32 @@
+// layout.pug
+
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Museo Arte
+
+    link(rel="stylesheet", href="/css/style.css")
+  body
+    header
+      .container
+        h1 Museo de Arte
+        p Tu espacio para disfrutar de las mejores obras
+
+        nav
+          ul
+            li: a(href='/') Inicio
+            li: a(href='/galeria') Galería
+            li: a(href='/acerca') Acerca
+
+    .container
+      block content
+
+    footer
+      p © 2025 Museo de Arte - Todos los derechos reservados
+
+
+
+
+
