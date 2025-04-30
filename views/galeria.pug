@@ -2,11 +2,11 @@ extends layout
 
 block content
   h2= titulo
-  img(src=obra.imagen, alt=obra.titulo)
-  p Autor: #[strong= obra.autor] — Año: #[strong= obra.año]
-  p= obra.descripcion
-  a(href='/galeria') ← Volver a Galería
-
-
+  .galeria
+    each obra in obras
+      .obra-card
+        img(src=obra.imagen, alt=obra.titulo)
+        h3= obra.titulo
+        p= obra.autor + " (" + obra.año+ ")"
 
 
